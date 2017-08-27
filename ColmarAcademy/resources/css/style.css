@@ -1,0 +1,714 @@
+/* Universal Styles */
+html {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.mobile {
+  display: none;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  color: #BE3144;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  color: #303841;
+}
+
+a {
+  text-decoration: none;
+  color: #BE3144;
+  cursor: pointer;
+}
+
+a:visited {
+  color: #303841;
+}
+
+/* decrease font sizes with screen size */
+@media only screen and (max-width:905px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+/* decrease padding with screen size */
+@media only screen and (max-width:576px) {
+  h2 {
+    padding-bottom: 1rem;
+  }
+}
+
+/* site containers */
+header,
+footer,
+.banner,
+.information,
+.programmes,
+.thesis {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem 1.5rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header Styles */
+header {
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+   justify-content: space-between;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  background-color: #D3D6DB;
+}
+
+.logo,
+nav {
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+}
+
+.logo {
+  padding-left: 1.5rem;
+  color: #303841;
+}
+
+/* Hide the mobile menu logo */
+.logo.menu {
+  display: none;
+}
+
+nav {
+  padding-right: 1.5rem;
+}
+
+nav span {
+  padding: 0.5rem;
+  border-radius: 3px;
+  -webkit-transition: background-color 450ms ease-out 75ms;
+  transition: background-color 450ms ease-out 75ms;
+}
+
+nav span:hover {
+  background-color: rgba(74,91,102,0.2);
+}
+
+.sitename-a {
+  color: #303841;
+  text-transform: uppercase;
+  padding-right: 0.2rem;
+}
+
+.sitename-b {
+  color: #3A4750;
+}
+
+/* display 3/4 of the mobile menu icons */
+@media only screen and (max-width:650px) {
+  .logo {
+    padding-right: 0.5rem;
+  }
+  nav.desktop {
+    display: none;
+  }
+  nav.mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+   -ms-flex-positive: 1;
+           flex-grow: 1;
+    -ms-flex-pack: distribute;
+  justify-content: space-around;
+    padding-right: 0rem;
+  }
+  nav.mobile .menu {
+    -webkit-box-flex: 1;
+   -ms-flex-positive: 1;
+           flex-grow: 1;
+    height: 4rem;
+    -webkit-transition: all 450ms ease 50ms;
+    transition: all 450ms ease 50ms;
+  }
+  nav.mobile img {
+    padding-top: 1rem;
+    height: 2rem;
+  }
+  nav.mobile .menu:hover,
+  nav.mobile .menu:active {
+    background-color: #BE3144;
+    cursor: pointer;
+  }
+}
+
+/* hide the desktop logo and show the mobile logo */
+@media only screen and (max-width:450px) {
+  .logo {
+    display: none;
+  }
+  .logo.menu {
+    display: block;
+    padding-left: 0;
+  }
+}
+
+/* Banner Styles */
+.hero {
+  max-width: 60%;
+  -ms-flex-negative: 1;
+        flex-shrink: 1;
+  box-shadow: 1px 1px 3px #D3D6DB;
+}
+
+.cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
+  -webkit-box-pack: center;
+     -ms-flex-pack: center;
+   justify-content: center;
+  padding-left: 1.5rem;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+}
+
+h1 {
+  color: #BE3144;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  padding-bottom: 2.5rem;
+  text-shadow: 1px 1px 2px #D3D6DB;
+}
+
+.cta h3 {
+  color: #3A4750;
+  font-family: 'Gentium Basic', serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+.btn {
+  position: relative;
+  padding: 0.5rem;
+  width: 40%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #D3D6DB;
+  border-radius: 3px;
+  color: #D3D6DB;
+  background-color: #BE3144;
+  cursor: pointer;
+  -webkit-transition: all 450ms ease 50ms;
+  transition: all 450ms ease 50ms;
+}
+
+.btn:hover {
+  border: 1px solid #BE3144;
+  box-shadow: 0 0 10px #BE3144;
+}
+
+/* Add fontawesome arrow animation */
+.btn span,
+.btn .arrow {
+  display:inline-block;
+  text-align: center;
+}
+
+.btn span {
+  width: 80%;
+  position: relative;
+  left: 10%;
+  -webkit-transition: all 1s ease 50ms;
+  transition: all 1s ease 50ms;
+}
+
+.btn .arrow {
+  width: 20%;
+  position: relative;
+  right: 15%;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -webkit-transition: all 1s ease 50ms;
+  transition: all 1s ease 50ms;
+}
+
+.btn:hover .arrow {
+  right: 0;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.btn:hover span {
+  left: 0;
+}
+
+/* flex content vertical and max-width hero.
+The hero is very tall on a tablet so hide the bottom */
+@media only screen and (max-width:850px) {
+  .banner .flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+  }
+  .hero {
+    max-width: 100%;
+    height: 325px;
+    overflow: hidden;
+  }
+  h1 {
+    padding-top: 2.5rem;
+  }
+}
+
+/* adjust the padding, God, the padding... */
+@media only screen and (max-width:680px) {
+  .banner .flex-container {
+    padding: 0 0 2rem 0;
+  }
+  .cta {
+    padding: 0 1rem 0 1rem;
+  }
+}
+
+/* the screen size is narrow enough that hero is not too tall */
+@media only screen and (max-width:576px) {
+  h1 {
+    font-size: 2rem;
+    padding: 2rem 0 2rem;
+  }
+  .hero {
+    max-width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .cta h3 {
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* Information Styles */
+.information {
+  background-color: #D3D6DB;
+}
+
+.information .flex-container {
+  padding-top: 0;
+}
+
+.main {
+  max-width: 60%;
+  -ms-flex-negative: 1;
+        flex-shrink: 1;
+  margin-top: 2rem;
+}
+
+.main .img-container {
+  padding-bottom: 2rem;
+}
+
+.main h2 {
+  padding-bottom: 1.5rem;
+}
+
+.main span {
+  display: block;
+}
+
+.attribution {
+  font-weight: bold;
+  color: #303841;
+}
+
+.quote {
+  font-family: 'Gentium Basic', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.2;
+  padding-bottom: 1.2rem;
+}
+
+.additional {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+
+.info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+}
+
+.info-item .img-container {
+  height: auto;
+  width: 35%;
+  margin: 1rem;
+}
+
+.info-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
+  -webkit-box-pack: center;
+     -ms-flex-pack: center;
+   justify-content: center;
+  width: 65%;
+}
+
+.info-details span {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  padding-bottom: 0.5rem;
+}
+
+/* screen still too big to fill with side bar,
+so keep main visible and flex side bar vertically */
+@media only screen and (max-width:850px) {
+  .information .flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+    padding-top: 2rem;
+  }
+  .main {
+    max-width: 100%;
+    margin-top: 0;
+  }
+  .additional {
+    margin-left: 0;
+  }
+  .info-item {
+    width: 50%;
+    margin: 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+  }
+  .info-item .img-container {
+    width: 100%;
+    margin: 0;
+  }
+  .information .img-container.desktop {
+    display: none;
+  }
+  .information .img-container.mobile {
+    display: block;
+  }
+  .info-details {
+    padding: 1rem;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+/* padding again */
+@media only screen and (max-width:680px) {
+  .main {
+    margin-top: 0;
+  }
+  .information .flex-container {
+    padding: 0 0 2rem 0;
+  }
+}
+
+/* go full mobile, hide main, full-width sidebar */
+@media only screen and (max-width:576px) {
+  .information .desktop {
+    display: none;
+  }
+  .information .flex-container {
+    margin: 1rem 1rem 0 1rem ;
+  }
+  .info-item {
+    width: 100%;
+  }
+  .info-details a {
+    font-size: 0.875rem;
+  }
+}
+
+/* Programme Styles */
+.programmes {
+  background-color: #303841;
+  padding: 2rem 0 2rem;
+}
+
+.programmes h2 {
+  text-align: center;
+}
+
+/* as screen size decreases want to keep these big as long as possible.
+Keep wrapping them onto new rows. */
+.programmes-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+   justify-content: space-between;
+  margin: 0 4.5rem;
+}
+
+/* Need to set some sort of fixed width so programmes will wrap onto new rows */
+.programme {
+  -ms-flex-preferred-size: 16rem;
+      flex-basis: 16rem;
+}
+
+.course {
+  padding: 1rem;
+  color: #D3D6DB;
+  margin-bottom: 0.5rem;
+  height: 115px;
+  -webkit-transition: background-color 400ms ease-out 75ms;
+  transition: background-color 400ms ease-out 75ms;
+}
+
+.course:hover {
+  background-color: #3A4750;
+  cursor: pointer;
+}
+
+.course .title {
+  color: #BE3144;
+  padding-bottom: 0.5rem;
+}
+
+.course h4 {
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.course .content {
+  line-height: 1.4;
+  font-size: 0.875rem;
+}
+
+/* switch from 3x2 to 2x3, so change spacing */
+@media only screen and (max-width: 960px) {
+  .programmes-container {
+    -ms-flex-pack: distribute;
+  justify-content: space-around;
+  }
+}
+
+/* single column, so widen to match .information image width */
+@media only screen and (max-width: 680px) {
+  .programmes-container {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  .programme {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+/* switch to the mobile layout */
+@media only screen and (max-width:576px) {
+  .programmes {
+    background-color: white;
+  }
+  .programmes-container {
+    max-width: 100%;
+    margin: 0 1rem;
+  }
+  .programmes .desktop,
+  .programmes .img-container {
+    display: none;
+  }
+  .programme {
+    margin-bottom: 0.5rem;
+  }
+  .course {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #303841;
+  }
+  .course .title {
+    padding: 1rem 0 1rem 1rem;
+    color: #D3D6DB;
+  }
+}
+
+/* Thesis Styles */
+.thesis {
+  background-color: #D3D6DB;
+  padding-top: 2rem;
+}
+
+.thesis .flex-container {
+  padding-top: 0;
+}
+
+.thesis h2 {
+  text-align: center;
+}
+
+.thesis .quote {
+  padding-bottom: 0;
+}
+
+.vid-container {
+  padding-bottom: 1.5rem;
+}
+
+video {
+  height:auto;
+  width: 100%;
+}
+
+.exhibit-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: background-color 400ms ease-out 100ms;
+  transition: background-color 400ms ease-out 100ms;
+}
+
+.exhibit-item:hover {
+  background-color: rgba(74,91,102,0.4);
+  cursor: pointer;
+}
+
+.exhibit-item .img-container {
+  height: auto;
+  max-width: 35%;
+  margin: 1rem;
+}
+
+.exhibit-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
+  -webkit-box-pack: center;
+     -ms-flex-pack: center;
+   justify-content: center;
+}
+
+/* just hide the sidebar here */
+@media only screen and (max-width:850px) {
+  .thesis .additional.desktop {
+    display: none;
+  }
+}
+
+/* padding :'( */
+@media only screen and (max-width:680px) {
+  .thesis .flex-container {
+    padding: 0 0 1.5rem 0;
+  }
+}
+
+/* hide accompanying text and make video full width */
+@media only screen and (max-width:640px) {
+  .thesis .desktop {
+    display: none;
+  }
+  .thesis .main {
+    width: 100%;
+  }
+  .vid-container {
+    padding: 0;
+  }
+}
+
+/* Footer Styles */
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+   justify-content: space-between;
+  padding-top: 1rem;
+  height: 4rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  padding-left: 1.5rem;
+}
+ .legal {
+   padding-right: 1.5rem;
+ }
+
+.legal span {
+  padding-left: 1rem;
+}
+
+/* adjust for mobile layout */
+@media only screen and (max-width:640px) {
+  footer {
+    height: auto;
+  }
+  .copyright {
+    padding-bottom: 1rem;
+  }
+  .legal {
+    display: none
+  }
+}
